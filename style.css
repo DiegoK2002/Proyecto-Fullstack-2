@@ -1,0 +1,25 @@
+.carousel {
+    height: 600px;
+}
+
+.carousel img {
+    height: 600px;
+    object-fit: cover;
+}
+footer{
+    background-color: #2b3035;
+    padding: 20px 0;
+    color: white
+}
+.card {
+    width: 18rem;
+    margin: 0 auto;
+    text-align: center;
+    font-style: oblique;
+    color: rgb(110, 92, 75);
+}
+.card img {
+    height: 400px;
+    width: 150px;
+    margin: 0 auto;
+}
