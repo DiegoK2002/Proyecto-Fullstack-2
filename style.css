@@ -13,11 +13,11 @@ body{
 
 .carousel-text{
     position: absolute;
-    bottom: 20%;
-    left: 15%; 
+    bottom: 15%;
+    left: 10%; 
     background-color: rgba(44, 62, 80, 0.8);
-    color: rgb(247, 245, 250);
-    transform: translate(0,-300px); 
+    color: rgb(37, 199, 45);
+    transform: translate(0,-250px); 
     padding: 3rem 2rem;
     font-size: 2rem;
     border-radius: 8px;
