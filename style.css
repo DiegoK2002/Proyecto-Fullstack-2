@@ -17,6 +17,7 @@ body{
     left: 15%; 
     background-color: rgba(44, 62, 80, 0.8);
     color: rgb(247, 245, 250);
+    transform: translate(0,-300px); 
     padding: 3rem 2rem;
     font-size: 2rem;
     border-radius: 8px;
