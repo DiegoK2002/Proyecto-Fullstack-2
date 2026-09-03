@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(42, 42, 180);
+}
+
+.carousel {
+    height: 600px;
+}
+
+.carousel img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-text{
+    position: absolute;
+    bottom: 15%;
+    left: 10%; 
+    background-color: rgba(44, 62, 80, 0.8);
+    color: rgb(37, 199, 45);
+    transform: translate(0,-250px); 
+    padding: 3rem 2rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+}
+
+footer{
+    background-color: #2b3035;
+    padding: 20px 0;
+    color: white
+}
+
+.card {
+    margin: 0 auto;
+    width: 650px;
+    text-align: center;
+    font-style: oblique;
+    color: rgb(110, 92, 75);
+}
+
+.card img {
+    height: 400px;
+    width: 650px;
+    margin: 0 auto;
+}
