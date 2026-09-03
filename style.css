@@ -44,3 +44,13 @@ footer{
     width: 150px;
     margin: 0 auto;
 }
+
+.destacado{
+    color: rgb(8, 7, 7);
+    text-align: center;
+}
+
+#titulo{
+    font-size: 20px;
+    text-align: center;
+}
