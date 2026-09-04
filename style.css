@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(42, 42, 180);
+    background-color: rgb(248, 245, 238);
 }
 
 .carousel {
@@ -33,10 +33,12 @@ footer{
 
 .card {
     width: 18rem;
+    height: 620px;
     margin: 0 auto;
     text-align: center;
     font-style: oblique;
     color: rgb(110, 92, 75);
+    ;
 }
 
 .card img {

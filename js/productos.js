@@ -26,17 +26,17 @@ const productos = [
   {
     id: 3,
     nombre: "Guitarra Acústica Clásica 4/4 Yamaha C40",
-    categoria: "Guitarras clásicas",
+    categoria: "Guitarras Acústicas",
     descripcion: "Nailon, tapa de abeto. Ideal para estudio y flamenco.",
     descripcionLarga: "La Yamaha C40 es una guitarra clásica de tamaño completo (4/4), con cuerdas de nailon, tapa de abeto y aros/fondo de meranti. Es el modelo más utilizado en escuelas de música y academias por su bajo costo de mantención, tensión cómoda para los dedos y sonido cálido, ideal para técnica clásica y flamenca.",
     precio: 89990,
-    stock: 12,
+    stock: 10,
     imagen: "imagenes/cards/3.jpg"
   },
   {
     id: 4,
     nombre: "Guitarra Electroacústica Takamine GN20CE",
-    categoria: "Guitarras electroacústicas",
+    categoria: "Guitarras Acústicas",
     descripcion: "Pickup integrado, afinador incorporado.",
     descripcionLarga: "La Takamine GN20CE combina un cuerpo tipo NEX (más pequeño y cómodo que un dreadnought) con un sistema de amplificación TK-40D que incluye ecualizador y afinador integrado. Tapa de abeto sólido, aros y fondo de caoba. Perfecta para presentaciones en vivo, ya que se puede conectar directamente a un amplificador o consola.",
     precio: 349990,
@@ -46,11 +46,11 @@ const productos = [
   {
     id: 5,
     nombre: "Guitarra 3/4 Niños Yamaha JR1",
-    categoria: "Guitarras infantiles",
+    categoria: "Guitarras Acústicas",
     descripcion: "Tamaño reducido para niños de 6 a 10 años.",
     descripcionLarga: "La Yamaha JR1 es una guitarra acústica de tamaño 3/4, pensada para niños y niñas entre 6 y 10 años o para adultos de contextura pequeña. Mantiene la calidad de construcción típica de Yamaha en un formato compacto, con tapa de abeto y cuerpo de meranti, ideal como primer instrumento.",
     precio: 79990,
-    stock: 10,
+    stock: 6,
     imagen: "imagenes/cards/5.jpg"
   },
   {
@@ -60,7 +60,17 @@ const productos = [
     descripcion: "Cuerpo de álamo, mástil de arce, pastillas SSS.",
     descripcionLarga: "La Squier Affinity Stratocaster es la puerta de entrada al mundo Fender. Cuerpo de álamo, mástil de arce con diapasón de arce o laurel según acabado, y configuración de pastillas SSS (single-single-single) con selector de 5 posiciones, el clásico sonido Stratocaster. Requiere amplificador (no incluido).",
     precio: 249990,
-    stock: 6,
+    stock: 5,
     imagen: "imagenes/cards/6.jpg"
+  },
+  {
+    id: 7,
+    nombre: "Guitarra Eléctrica Les Paul Epiphone Les Paul Std",
+    categoria: "Guitarras eléctricas",
+    descripcion: "Cuerpo caoba, tapa arce, pastillas humbucker.",
+    descripcionLarga: "La guitarra eléctrica Epiphone Les Paul Standard 60s pertenece a la nueva colección Inspired by Gibson y vienen a recrear las características sonoras de las Les Paul de los 60s. Cuerpo de caoba con tapa de arce, mástil de caoba con diapasón de palorrosa y dos pastillas humbucker Alnico Classic. Incluye estuche rígido.",
+    precio: 329990,
+    stock: 4,
+    imagen: "imagenes/cards/7.jpg"
   }
 ];
