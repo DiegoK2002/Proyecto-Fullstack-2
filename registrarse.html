@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Sonido Vivo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - Sonido Vivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="noticias.css">
 </head>
 <body>
 
@@ -39,6 +39,7 @@
         <li class="nav-item">
         <a class="nav-link" href="carrito.html" style="transform: translate(0px);" title="Ir al Carrito">
             <img src="imagenes/icons/cart.png" alt="Carrito de compras" width="24" height="24">
+            <span id="cart-badge" class="badge rounded-pill bg-danger" style="display:none; position:relative; top:-10px; left:-8px;">0</span>
         </a>
         </li> 
         <li class="nav-item">
@@ -49,77 +50,97 @@
         </li> 
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="registrarse.html" style="transform: translate(120px);">Registrarse</a>
-        </li>  
+        </li> 
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-4" >
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 80rem;">
-            <div class="card-body">
-                <h4>Registro</h4>
-                <br>
-                <br>
-                <div class="row">
-                    <p style="margin-left: -500px;"><strong>Nombre:</strong></p>
-                    <input type="text" placeholder="Nombre" class="form-control" style="width: 250px; margin-left: 0px; transform: translate(-580px, -10px);">
-                    <p style="margin-left: 0px;transform: translate(-40px, -40px);"><strong>Apellidos:</strong></p>
-                    <input type="text" placeholder="Apellidos" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(500px, -90px);">
+  <main class="container my-5 flex-grow-1">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="card-title text-center fw-bold mb-4">Registro de Usuario</h2>
+            
+            <form id="form-registro" novalidate>
+              <div class="row g-3">
+                
+                <div class="col-md-6">
+                  <label for="reg-run" class="form-label fw-semibold">RUN *</label>
+                  <input type="text" class="form-control" id="reg-run" placeholder="12345678K (sin puntos ni guion)" required>
                 </div>
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>RUN:</strong></p>
-                <input type="tel" placeholder="RUN" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Direccion:</strong></p>
-                <input type="tel" placeholder="Direccion" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Comuna:</strong></p>
-                <input type="tel" placeholder="Comuna" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Región:</strong></p>
-                <input type="tel" placeholder="Región" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Teléfono:</strong></p>
-                <input type="tel" placeholder="Teléfono" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Correo:</strong></p>
-                <input type="email" placeholder="Correo electrónico" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Fecha de nacimiento:</strong></p>
-                <input type="date" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(70px, -80px);">
-                <p style="margin-left: -1000px; transform: translate(0px, -30px);"><strong>Contraseña:</strong></p>
-                <input type="password" placeholder="Contraseña" class="form-control" style="width: 250px; margin-left: 150px; transform: translate(30px, -80px);">
-                <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 150px; transform: translate(-550px, -30px);">
-                    Tipo de usuario 
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Cliente</a></li>
-                    <li><a class="dropdown-item" href="#">Administrador</a></li>
-                </ul>
+
+                <div class="col-md-6">
+                  <label for="reg-tipo-usuario" class="form-label fw-semibold">Tipo de Usuario *</label>
+                  <select class="form-select" id="reg-tipo-usuario" required>
+                    <option value="Cliente" selected>Cliente</option>
+                    <option value="Administrador">Administrador</option>
+                  </select>
                 </div>
-                <a href="#" class="btn btn-primary">Registrarse</a>
-            </div>
-            </div>
-        </div>    
-</div> 
+
+                <div class="col-md-6">
+                  <label for="reg-nombre" class="form-label fw-semibold">Nombre *</label>
+                  <input type="text" class="form-control" id="reg-nombre" placeholder="Tu nombre" required maxlength="50">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="reg-apellidos" class="form-label fw-semibold">Apellidos *</label>
+                  <input type="text" class="form-control" id="reg-apellidos" placeholder="Tus apellidos" required maxlength="100">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="reg-correo" class="form-label fw-semibold">Correo Electrónico *</label>
+                  <input type="email" class="form-control" id="reg-correo" placeholder="correo@ejemplo.com" required maxlength="100">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="reg-fecha-nac" class="form-label fw-semibold">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" id="reg-fecha-nac">
+                </div>
+
+                <div class="col-12">
+                  <label for="reg-direccion" class="form-label fw-semibold">Dirección *</label>
+                  <input type="text" class="form-control" id="reg-direccion" placeholder="Calle, número, depto/villa" required maxlength="300">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="regionesSelect" class="form-label fw-semibold">Región *</label>
+                  <select class="form-select" id="regionesSelect" required>
+                    <option value="">Cargando regiones...</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="comunasSelect" class="form-label fw-semibold">Comuna *</label>
+                  <select class="form-select" id="comunasSelect" required>
+                    <option value="">Selecciona primero una región</option>
+                  </select>
+                </div>
+
+        
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Crear Cuenta</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
 <br>
-
-<footer>
-    <div class="container mt-4" >
-    <div class="row">
-        <div class="col" style="font-style: oblique;">
-            <p>Vivimos para la música</p>
-            
-            <p>2026</p>
-        </div>  
-        <div class="col">
-            <p>Teléfono: +56921414123</p>
-        </div>    
-        <div class="col">
-            <p>Mail de contacto: tiendaVivo@gmail.com</p>
-        </div> 
+<footer class="text-center mt-auto">
+    <div class="container">
+      <small>&copy; 2026 Sonido Vivo - Todos los derechos reservados.</small>
     </div>
-    </div>    
-    </container>
-</footer>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/regiones-comunas.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

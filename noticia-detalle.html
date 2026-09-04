@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Sonido Vivo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Noticia - Sonido Vivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="noticias.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-<nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+
+  <nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand"  href="#">Sonido Vivo </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +22,13 @@
             <img src="imagenes/icons/home.png" alt="" width="24" height="24">
         </a>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="catalogo.html">Catálogo</a>
+          <a class="nav-link" href="catalogo.html">Catálogo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="nosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="noticias.html">Noticias</a>
+          <a class="nav-link active" aria-current="page" href="noticias.html">Noticias</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contactanos.html">Contactanos</a>
@@ -50,31 +51,28 @@
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="registrarse.html" style="transform: translate(120px);">Registrarse</a>
-        </li> 
+        </li>  
       </ul>
     </div>
   </div>
+
 </nav>
 
-
-<div class="container mt-4">
-    <h2 class="mb-4" style="color: white;">Catálogo de Guitarras</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="catalogo-container">
-        <!-- Las tarjetas de producto se generan dinámicamente con js/catalogo.js
-             a partir del arreglo `productos` definido en js/productos.js -->
+  <main class="container my-5 flex-grow-1">
+    <div class="row" id="noticia-detalle-container">
+      <!-- Carga dinámica por js/noticias.js -->
     </div>
-</div>
-
+  </main>
 <br>
-<footer class="text-center mt-auto">
+  <footer class="text-center mt-auto">
     <div class="container">
       <small>&copy; 2026 Sonido Vivo - Todos los derechos reservados.</small>
     </div>
   </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="js/productos.js"></script>
-    <script src="js/carrito.js"></script>
-    <script src="js/catalogo.js"></script>     
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/noticias.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>
