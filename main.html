@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
   <div class="container-fluid">
     <a class="navbar-brand"  href="#">Sonido Vivo </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,8 @@
         <li class="nav-item">
           <a class="nav-link" href="contactanos.html">Contactanos</a>
         </li>
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar" style="transform: translate(0px); width: 400px;"/>
+        <form class="d-flex" role="search" data-bs-theme="dark">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar" style="transform: translate(0px); width: 500px;"/>
         <button class="btn btn-outline-success" type="submit" style="transform: translate(0px);">Buscar</button>
       </form>
         <li class="nav-item">
@@ -46,7 +46,7 @@
           <a class="nav-link" href="iniciar-sesion.html" style="transform: translate(120px);">Iniciar Sesión</a>
         </li>  
         <li class="nav-item">
-          <p style="transform: translate(120px,8px); color: white">|</p>
+          <p style="transform: translate(120px,8px); color: rgb(110, 92, 75);">|</p>
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="registrarse.html" style="transform: translate(120px);">Registrarse</a>
@@ -58,9 +58,10 @@
 
 
 <div id="carouselExampleAutoplaying" 
-     class="carousel slide w-75 mx-auto" 
+     class="carousel slide w-76 mx-auto" 
      data-bs-ride="carousel"
-     data-bs-interval="3000">
+     data-bs-interval="3000"
+     style="border-radius: 30px; overflow: hidden; box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);">
 <div class="carousel-inner">
 
     <div class="carousel-item active">
@@ -81,7 +82,7 @@
       <div class="carousel-text"><strong>Batería Acústica Pearl <br> Ahora: $599.000</strong></div>
   </div>
 
-  <div class="carousel-item active">
+  <div class="carousel-item">
       <img src="imagenes/carrusel/sonido vivo.jpg" class="d-block w-100" height="800" alt="Imagen no disponible" >
     </div>
 
@@ -98,73 +99,81 @@
 
 </div>
 
-<div class="container mt-4" >
+<div class="container mt-4">
     <div class="row">
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/1.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra Acústica Folk Yamaha F310</h5>
                 <p>Tapa de abeto, aros y fondo de meranti. Ideal para iniciantes.</p>
                 <h4>$129.990</h4>
-                <button class="btn btn-primary" data-agregar-id="1" onclick="agregarAlCarrito(1)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="1" onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="1" onclick="window.location.href='producto-detalle.html?id=1'">Detalles</button>
             </div>
             </div>
         </div>    
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra Acústica Dreadnought Fender CD-60S</h5>
                 <p>Tapa de abeto macizo, brazo de caoba. Sonido cálido y proyectado.</p>
                 <h4>$189.990</h4>
-                <button class="btn btn-primary" data-agregar-id="2" onclick="agregarAlCarrito(2)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="2" onclick="agregarAlCarrito(2)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="2" onclick="window.location.href='producto-detalle.html?id=2'">Detalles</button>
             </div>
             </div>
         </div>    
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra Acústica Clásica 4/4 Yamaha C40</h5>
                 <p>Nailon, tapa de abeto. Ideal para estudio y flamenco.</p>
                 <h4>$89.990</h4>
-                <button class="btn btn-primary" data-agregar-id="3" onclick="agregarAlCarrito(3)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="3" onclick="agregarAlCarrito(3)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="3" onclick="window.location.href='producto-detalle.html?id=3'">Detalles</button>
             </div>
             </div>
         </div>    
     </div>
+    <br>
+    <br>
     <div class="row">
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/4.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra Electroacústica Takamine GN20CE</h5>
                 <p>Pickup integrado, afinador incorporado.</p>
                 <h4>$349.990</h4>
-                <button class="btn btn-primary" data-agregar-id="4" onclick="agregarAlCarrito(4)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="4" onclick="agregarAlCarrito(4)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="4" onclick="window.location.href='producto-detalle.html?id=4'">Detalles</button>
             </div>
             </div>
         </div>    
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/5.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra 3/4 Niños Yamaha JR1</h5>
                 <p>Tamaño reducido para niños de 6 a 10 años.</p>
                 <h4>$79.990</h4>
-                <button class="btn btn-primary" data-agregar-id="5" onclick="agregarAlCarrito(5)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="5" onclick="agregarAlCarrito(5)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="5" onclick="window.location.href='producto-detalle.html?id=5'">Detalles</button>
             </div>
             </div>
         </div>    
         <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
             <img src="imagenes/cards/6.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Guitarra Eléctrica Stratocaster Squier Affinity Strat</h5>
                 <p>Cuerpo de álamo, mástil de arce, pastillas SSS.</p>
                 <h4>$249.990</h4>
-                <button class="btn btn-primary" data-agregar-id="6" onclick="agregarAlCarrito(6)">Comprar</button>
+                <button class="btn btn-primary" data-agregar-id="6" onclick="agregarAlCarrito(6)">Agregar al Carrito</button>
+                <button class="btn btn-primary" data-agregar-id="6" onclick="window.location.href='producto-detalle.html?id=6'">Detalles</button>
             </div>
             </div>
         </div>    

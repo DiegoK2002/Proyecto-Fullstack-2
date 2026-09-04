@@ -2,29 +2,6 @@ body{
     background-color: rgb(248, 245, 238);
 }
 
-.carousel {
-    height: 600px;
-}
-
-.carousel img {
-    height: 600px;
-    object-fit: cover;
-}
-
-.carousel-text{
-    position: absolute;
-    bottom: 15%;
-    left: 10%; 
-    background-color: rgba(44, 62, 80, 0.8);
-    color: rgb(221, 235, 222);
-    transform: translate(0,-250px); 
-    padding: 3rem 2rem;
-    font-size: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    width: 80%;
-}
-
 footer{
     background-color: #2b3035;
     padding: 20px 0;
@@ -33,16 +10,6 @@ footer{
 
 .card {
     width: 18rem;
-    height: 620px;
-    margin: 0 auto;
-    text-align: center;
-    font-style: oblique;
-    color: rgb(110, 92, 75);
-    ;
-}
-#carrito {
-    width: 18rem;
-    height: 620px;
     margin: 0 auto;
     text-align: center;
     font-style: oblique;
