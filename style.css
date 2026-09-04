@@ -40,15 +40,6 @@ footer{
     color: rgb(110, 92, 75);
     ;
 }
-#carrito {
-    width: 18rem;
-    height: 620px;
-    margin: 0 auto;
-    text-align: center;
-    font-style: oblique;
-    color: rgb(110, 92, 75);
-    ;
-}
 
 .card img {
     height: 400px;
