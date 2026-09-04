@@ -62,6 +62,8 @@
 </nav>
 
 
+
+
 <div class="offcanvas offcanvas-start"
      tabindex="-1"
      id="carritoOffcanvas"
@@ -151,92 +153,249 @@
 
 </div>
 
+
+
+
 <div class="container mt-4">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="catalogo-container">
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/1.png" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra Acústica Folk Yamaha F310</h5>
-                <p>Tapa de abeto, aros y fondo de meranti. Ideal para iniciantes.</p>
-                <h4>$129.990</h4>
-                <button class="btn btn-primary" data-agregar-id="1" onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
-                <button class="btn btn-primary" data-agregar-id="1" onclick="window.location.href='producto-detalle.html?id=1'">Detalles</button>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+        <!-- PRODUCTO 1 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/1.png"
+                     class="card-img-top"
+                     alt="Guitarra Acústica Folk Yamaha F310">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra Acústica Folk Yamaha F310
+                    </h5>
+
+                    <p>
+                        Tapa de abeto, aros y fondo de meranti.
+                        Ideal para iniciantes.
+                    </p>
+
+                    <h4>$129.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra Acústica Folk Yamaha F310"
+                            data-precio="129990"
+                            data-imagen="imagenes/cards/1.png">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=1"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
+        </div>
+
+
+        <!-- PRODUCTO 2 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/2.jpg"
+                     class="card-img-top"
+                     alt="Guitarra Acústica Dreadnought Fender CD-60S">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra Acústica Dreadnought Fender CD-60S
+                    </h5>
+
+                    <p>
+                        Tapa de abeto macizo, brazo de caoba.
+                        Sonido cálido y proyectado.
+                    </p>
+
+                    <h4>$189.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra Acústica Dreadnought Fender CD-60S"
+                            data-precio="189990"
+                            data-imagen="imagenes/cards/2.jpg">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=2"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
-        </div>    
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/2.jpg" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra Acústica Dreadnought Fender CD-60S</h5>
-                <p>Tapa de abeto macizo, brazo de caoba. Sonido cálido y proyectado.</p>
-                <h4>$189.990</h4>
-                <button class="btn btn-primary" data-agregar-id="2" onclick="agregarAlCarrito(2)">Agregar al Carrito</button>
-                <button class="btn btn-primary" data-agregar-id="2" onclick="window.location.href='producto-detalle.html?id=2'">Detalles</button>
+        </div>
+
+
+        <!-- PRODUCTO 3 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/3.jpg"
+                     class="card-img-top"
+                     alt="Guitarra Acústica Clásica Yamaha C40">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra Acústica Clásica 4/4 Yamaha C40
+                    </h5>
+
+                    <p>
+                        Nailon, tapa de abeto.
+                        Ideal para estudio y flamenco.
+                    </p>
+
+                    <h4>$89.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra Acústica Clásica 4/4 Yamaha C40"
+                            data-precio="89990"
+                            data-imagen="imagenes/cards/3.jpg">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=3"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
+        </div>
+
+
+        <!-- PRODUCTO 4 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/4.jpg"
+                     class="card-img-top"
+                     alt="Guitarra Electroacústica Takamine GN20CE">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra Electroacústica Takamine GN20CE
+                    </h5>
+
+                    <p>
+                        Pickup integrado, afinador incorporado.
+                    </p>
+
+                    <h4>$349.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra Electroacústica Takamine GN20CE"
+                            data-precio="349990"
+                            data-imagen="imagenes/cards/4.jpg">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=4"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
-        </div>    
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/3.jpg" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra Acústica Clásica 4/4 Yamaha C40</h5>
-                <p>Nailon, tapa de abeto. Ideal para estudio y flamenco.</p>
-                <h4>$89.990</h4>
-                <button class="btn btn-primary" data-agregar-id="3" onclick="agregarAlCarrito(3)">Agregar al Carrito</button>
-                <button class="btn btn-primary" data-agregar-id="3" onclick="window.location.href='producto-detalle.html?id=3'">Detalles</button>
+        </div>
+
+
+        <!-- PRODUCTO 5 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/5.jpg"
+                     class="card-img-top"
+                     alt="Guitarra Yamaha JR1">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra 3/4 Niños Yamaha JR1
+                    </h5>
+
+                    <p>
+                        Tamaño reducido para niños de 6 a 10 años.
+                    </p>
+
+                    <h4>$79.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra 3/4 Niños Yamaha JR1"
+                            data-precio="79990"
+                            data-imagen="imagenes/cards/5.jpg">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=5"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
+        </div>
+
+
+        <!-- PRODUCTO 6 -->
+        <div class="col">
+            <div class="card h-100" style="width: 20rem;">
+
+                <img src="imagenes/cards/6.jpg"
+                     class="card-img-top"
+                     alt="Guitarra Eléctrica Squier Affinity Strat">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        Guitarra Eléctrica Stratocaster Squier Affinity Strat
+                    </h5>
+
+                    <p>
+                        Cuerpo de álamo, mástil de arce, pastillas SSS.
+                    </p>
+
+                    <h4>$249.990</h4>
+
+                    <button type="button"
+                            class="btn btn-primary btn-agregar-carrito"
+                            data-nombre="Guitarra Eléctrica Stratocaster Squier Affinity Strat"
+                            data-precio="249990"
+                            data-imagen="imagenes/cards/6.jpg">
+                        Agregar al Carro
+                    </button>
+
+                    <a href="producto-detalle.html?id=6"
+                       class="btn btn-outline-primary">
+                        Detalles
+                    </a>
+
+                </div>
             </div>
-        </div>    
+        </div>
+
     </div>
-    <br>
-    <br>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="catalogo-container">
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/4.jpg" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra Electroacústica Takamine GN20CE</h5>
-                <p>Pickup integrado, afinador incorporado.</p>
-                <h4>$349.990</h4>
-                <button class="btn btn-primary" data-agregar-id="4" onclick="agregarAlCarrito(4)">Agregar al Carrito</button>
-                <button class="btn btn-primary" data-agregar-id="4" onclick="window.location.href='producto-detalle.html?id=4'">Detalles</button>
-            </div>
-            </div>
-        </div>    
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/5.jpg" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra 3/4 Niños Yamaha JR1</h5>
-                <p>Tamaño reducido para niños de 6 a 10 años.</p>
-                <h4>$79.990</h4>
-                <button type="button"
-                        class="btn btn-primary btn-agregar-carrito"
-                        data-nombre="Guitarra 3/4 Niños Yamaha JR1"
-                        data-precio="79990"
-                        data-imagen="imagenes/cards/5.jpg">
-                    Agregar al Carro
-                </button>
-              </div>
-            </div>
-        </div>
-        </div>
-        <div class="col" style="font-style: oblique; color: rgb(110, 92, 75);">
-            <div class="card" style="width: 20rem;">
-            <img src="imagenes/cards/6.jpg" class="card-img-top" alt="Imagen no disponible">
-            <div class="card-body">
-                <h5 class="card-title">Guitarra Eléctrica Stratocaster Squier Affinity Strat</h5>
-                <p>Cuerpo de álamo, mástil de arce, pastillas SSS.</p>
-                <h4>$249.990</h4>
-                <button class="btn btn-primary" data-agregar-id="6" onclick="agregarAlCarrito(6)">Agregar al Carrito</button>
-                <button class="btn btn-primary" data-agregar-id="6" onclick="window.location.href='producto-detalle.html?id=6'">Detalles</button>
-            </div>
-            </div>
-        </div>    
-    </div>     
-</div> 
+
+</div>
+
+
+
 
 <br>
 <footer class="text-center mt-auto">
