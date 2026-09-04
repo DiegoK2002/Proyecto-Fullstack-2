@@ -45,6 +45,20 @@ footer{
     margin: 0 auto;
 }
 
+#carrito-container .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    font-style: normal;
+}
+
+#carrito-container .card img {
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
 .destacado{
     color: rgb(8, 7, 7);
     text-align: center;

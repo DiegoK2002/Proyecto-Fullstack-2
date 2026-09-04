@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contáctanos - Sonido Vivo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="nosotros.css">
+  <title>Detalle de Noticia - Sonido Vivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="noticias.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
 
   <nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
@@ -27,10 +28,10 @@
           <a class="nav-link" href="nosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="noticias.html">Noticias</a>
+          <a class="nav-link active" aria-current="page" href="noticias.html">Noticias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="contactanos.html">Contactanos</a>
+          <a class="nav-link" href="contactanos.html">Contactanos</a>
         </li>
         <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar" style="transform: translate(0px); width: 400px;"/>
@@ -58,46 +59,20 @@
 </nav>
 
   <main class="container my-5 flex-grow-1">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <div class="card shadow-sm border-0">
-          <div class="card-body p-4 p-md-5">
-            <h2 class="card-title text-center fw-bold mb-4">Contáctanos</h2>
-            <p class="text-muted text-center mb-4">¿Tienes dudas o consultas? Envíanos un mensaje y te responderemos a la brevedad.</p>
-
-            <form id="form-contacto" novalidate>
-              <div class="mb-3">
-                <label for="contacto-nombre" class="form-label fw-semibold">Nombre Completo *</label>
-                <input type="text" class="form-control" id="contacto-nombre" placeholder="Ej: María González" required maxlength="100">
-              </div>
-
-              <div class="mb-3">
-                <label for="contacto-correo" class="form-label fw-semibold">Correo Electrónico *</label>
-                <input type="email" class="form-control" id="contacto-correo" placeholder="nombre@ejemplo.com" required maxlength="100">
-              </div>
-
-              <div class="mb-3">
-                <label for="contacto-mensaje" class="form-label fw-semibold">Mensaje *</label>
-                <textarea class="form-control" id="contacto-mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required maxlength="500"></textarea>
-                <div class="form-text">Máximo 500 caracteres.</div>
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100 py-2">Enviar Mensaje</button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="row" id="noticia-detalle-container">
+      <!-- Carga dinámica por js/noticias.js -->
     </div>
   </main>
 <br>
-<footer class="text-center mt-auto">
+  <footer class="text-center mt-auto">
     <div class="container">
       <small>&copy; 2026 Sonido Vivo - Todos los derechos reservados.</small>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/validaciones.js"></script>
+  <script src="js/noticias.js"></script>
   <script src="js/carrito.js"></script>
 </body>
 </html>
