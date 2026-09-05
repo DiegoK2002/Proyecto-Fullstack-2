@@ -42,7 +42,7 @@ function renderizarCatalogo() {
           <h4 class="text-primary fw-bold my-2">${formatearPrecio(p.precio)}</h4>
           <div class="d-flex gap-2 mt-2">
             <a href="producto-detalle.html?id=${p.id}" class="btn btn-outline-primary w-50">Ver detalle</a>
-            <button class="btn btn-primary w-50" onclick="agregarAlCarrito(${p.id})">Agregar</button>
+            <button class="btn btn-primary btn-agregar-carrito w-50" onclick="agregarAlCarrito(${p.id})">Agregar</button>
           </div>
         </div>
       </div>
