@@ -10,11 +10,13 @@ function mostrarResumen() {
     const resumen = document.getElementById("resumenPedido");
     const totalPago = document.getElementById("totalPago");
     const subtotalPago = document.getElementById("subtotalPago");
+    const btnPagar = document.querySelector('#formPago button[type="submit"]');
 
     if (!resumen || !totalPago) return;
 
     resumen.innerHTML = "";
 
+    // VALIDACIÓN: Carrito vacío
     if (carrito.length === 0) {
         resumen.innerHTML = `
             <div class="text-center py-4">
@@ -26,6 +28,12 @@ function mostrarResumen() {
         `;
         totalPago.textContent = "$0";
         if (subtotalPago) subtotalPago.textContent = "$0";
+        
+        // Deshabilitar botón de pago de entrada
+        if (btnPagar) {
+            btnPagar.disabled = true;
+            btnPagar.classList.add("disabled");
+        }
         return;
     }
 
@@ -89,6 +97,35 @@ function inicializarFormulario() {
         }
     }
 
+    // Restringir a solo números y limitar a 16 dígitos el número de tarjeta
+    const tarjetaInput = document.getElementById("numeroTarjeta");
+    if (tarjetaInput) {
+        tarjetaInput.addEventListener("input", (e) => {
+            // 1. Quitar todo lo que no sea número
+            let val = e.target.value.replace(/\D/g, "");
+            
+            // 2. Limitar a máximo 16 dígitos reales
+            val = val.slice(0, 16);
+            
+            // 3. Insertar espacio cada 4 dígitos
+            const grupos = val.match(/.{1,4}/g);
+            
+            // 4. Unir con espacios en blanco
+            e.target.value = grupos ? grupos.join(" ") : "";
+        });
+    }
+
+
+    // Restringir a solo números y limitar a 3 dígitos el cvv de la tarjeta
+    const cvvInput = document.getElementById("cvv");
+    if (cvvInput) {
+        cvvInput.addEventListener("input", (e) => {
+            // Remueve todo lo que no sea un número y recorta a 3 dígitos
+            e.target.value = e.target.value.replace(/\D/g, "").slice(0, 3);
+        });
+    }
+
+
     // Escuchar cambios de opción de pago
     opcionesPago.forEach(radio => {
         radio.addEventListener("change", (e) => {
@@ -113,18 +150,38 @@ function inicializarFormulario() {
     formPago.addEventListener("submit", function(e) {
         e.preventDefault();
 
+        // Doble verificación del carrito al enviar
         if (carrito.length === 0) {
-            alert("No puedes realizar el pago porque tu carrito está vacío.");
+            mostrarAlertaError("Tu carrito está vacío. Agrega productos antes de pagar.");
             return;
         }
 
         const medioPago = document.querySelector('input[name="formaPago"]:checked').value;
         alert(`¡Gracias por tu compra! Tu pago por [${medioPago.toUpperCase()}] ha sido procesado exitosamente.`);
 
-        // Limpiar el carrito en el almacenamiento local y redirigir
+        // Limpiar el carrito en localStorage y redirigir
         localStorage.removeItem("carrito");
         window.location.href = "main.html";
     });
+}
+
+// Función auxiliar para renderizar alertas Bootstrap
+function mostrarAlertaError(mensaje) {
+    let alertaContainer = document.getElementById("alertaPagoContainer");
+    
+    if (!alertaContainer) {
+        alertaContainer = document.createElement("div");
+        alertaContainer.id = "alertaPagoContainer";
+        const form = document.getElementById("formPago");
+        form.parentNode.insertBefore(alertaContainer, form);
+    }
+
+    alertaContainer.innerHTML = `
+        <div class="alert alert-warning alert-dismissible fade show mb-4" role="alert">
+            <strong>¡Atención!</strong> ${mensaje}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
