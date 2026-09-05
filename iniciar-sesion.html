@@ -9,7 +9,8 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+<nav class="navbar nav-tabs navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand"  href="#">Sonido Vivo </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,8 +18,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <a class="nav-link" href="main.html" style="transform: translate(0px);" title="Ir al Inicio">
-            <img src="imagenes/icons/home.png" alt="" width="24" height="24">
+        <a class="nav-link active" aria-current="page" href="main.html" style="transform: translate(0px);" title="Ir al Inicio">
+            <img src="imagenes/icons/home.png" alt="Imagen no disponible" width="24" height="24">
         </a>
         <li class="nav-item">
           <a class="nav-link" href="catalogo.html">Catálogo</a>
@@ -32,29 +33,86 @@
         <li class="nav-item">
           <a class="nav-link" href="contactanos.html">Contactanos</a>
         </li>
-       <form class="d-flex" role="search" data-bs-theme="dark">
+        <form class="d-flex" role="search" data-bs-theme="light" style="transform: translate(0px);">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar" style="transform: translate(0px); width: 500px;"/>
         <button class="btn btn-outline-success" type="submit" style="transform: translate(0px);">Buscar</button>
       </form>
         <li class="nav-item">
-        <a class="nav-link" href="carrito.html" style="transform: translate(0px);" title="Ir al Carrito">
-            <img src="imagenes/icons/cart.png" alt="Carrito de compras" width="24" height="24">
-            <span id="cart-badge" class="badge rounded-pill bg-danger" style="display:none; position:relative; top:-10px; left:-8px;">0</span>
+        <a class="nav-link carrito-icono-wrapper" href="#" style="transform: translate(0px);" title="Ver Carrito"
+        data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
+            
+          <img src="imagenes/icons/cart.png" alt="Carrito de compras" width="24" height="24">
+          <span id="carritoContador" class="badge rounded-pill bg-danger d-none">
+            0
+          </span>
         </a>
-        </li> 
+        </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="iniciar-sesion.html" style="transform: translate(120px);">Iniciar Sesión</a>
+          <a class="nav-link" href="iniciar-sesion.html" style="transform: translate(120px);">Iniciar Sesión</a>
         </li>  
         <li class="nav-item">
           <p style="transform: translate(120px,8px); color: rgb(110, 92, 75);">|</p>
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="registrarse.html" style="transform: translate(120px);">Registrarse</a>
-        </li> 
+        </li>  
       </ul>
     </div>
   </div>
 </nav>
+</nav>
+
+
+
+
+<div class="offcanvas offcanvas-start"
+     tabindex="-1"
+     id="carritoOffcanvas"
+     aria-labelledby="carritoOffcanvasLabel">
+
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="carritoOffcanvasLabel">
+            Tu Carrito
+        </h5>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Cerrar">
+        </button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column">
+
+        <div id="carritoLista" class="flex-grow-1">
+            <p class="carrito-vacio">
+                Tu carrito está vacío
+            </p>
+        </div>
+
+        <div class="border-top pt-3 mt-3">
+
+            <div class="d-flex justify-content-between mb-2">
+                <strong>Total:</strong>
+                <strong id="carritoTotal">$0</strong>
+            </div>
+
+            <a href="pago.html"
+               class="btn btn-primary w-100">
+                Ir a pagar
+            </a>
+
+            <button id="carritoVaciar"
+                    class="btn btn-outline-secondary w-100 mt-2">
+                Vaciar carrito
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
 
   <main class="container my-5 flex-grow-1">
     <div class="row justify-content-center">
@@ -106,6 +164,6 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/validaciones.js"></script>
-  <script src="js/carrito.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
