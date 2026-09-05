@@ -22,8 +22,15 @@
         <a class="nav-link" href="main.html" style="transform: translate(0px);" title="Ir al Inicio">
             <img src="imagenes/icons/home.png" alt="Imagen no disponible" width="24" height="24">
         </a>
-        <li class="nav-item">
-          <a class="nav-link" href="catalogo.html">Catálogo</a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCatalogo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogo
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownCatalogo">
+            <li><a class="dropdown-item" href="catalogo.html">Todos los productos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=Guitarras">Guitarras</a></li>
+            </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="nosotros.html">Nosotros</a>
