@@ -40,11 +40,18 @@ footer{
     color: rgb(110, 92, 75);
     ;
 }
-
+/*
 .card img {
     height: 400px;
     width: 150px;
     margin: 0 auto;
+}*/
+.card img {
+  width: 100%;          /* Ocupa todo el ancho de la tarjeta */
+  height: 350px;         /* Dale la altura que quieras en px o % */
+  object-fit: cover;    /* Corta y ajusta la imagen sin deformarla */
+  object-position: center; /* Centra la imagen para que no se corten las caras */
+  margin: 0 auto;
 }
 
 #carrito-container .card {
@@ -69,6 +76,12 @@ footer{
 #titulo{
     font-size: 20px;
     text-align: center;
+}
+
+h1{
+    color: black;
+    text-align: center;
+
 }
 
 .mensaje-carrito {
