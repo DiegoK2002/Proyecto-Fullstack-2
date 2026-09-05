@@ -72,5 +72,80 @@ const productos = [
     precio: 329990,
     stock: 4,
     imagen: "imagenes/cards/7.jpg"
+  },
+  {
+    id: 8,
+    nombre: "Bajo Eléctrico Jazz Bass Fender Player Jazz",
+    categoria: "Bajos Eléctricos",
+    descripcion: "Alder body, 2 Alnico V Jazz single-coil.",
+    descripcionLarga: "Su mástil de arce (Maple) presenta un confortable contorno en C de principios de los años 60, ofreciendo un tacto clásico y fluido. El diapasón de palisandro (Rosewood) mantiene el tradicional radio vintage de 7.25 acompañado de trastes Vintage Tall, asegurando una gran comodidad en la ejecución. En el apartado electrónico, incorpora un par de pastillas de bobina simple de estilo vintage de los '60s, encargadas de entregar el legendario gruñido rítmico, definición y pegada características del J Bass®.",
+    precio: 699990,
+    stock: 2,
+    imagen: "imagenes/cards/JazzBassFender.jpg"
+  },
+  {
+    id: 9,
+    nombre: "Batería Acústica 5 piezas Pearl Roadshow",
+    categoria: "Baterías",
+    descripcion: "Incluye stands, platillos y pedal de bombo.",
+    descripcionLarga: "La Pearl Roadshow es una batería acústica completa, versátil y confiable, pensada para músicos que buscan un set listo para tocar con buen sonido, presencia y respaldo de marca. Su configuración permite usarla en práctica, clases, ensayos, estudio o presentaciones, manteniendo una base sólida para distintos estilos musicales.",
+    precio: 599990,
+    stock: 2,
+    imagen: "imagenes/cards/BateriaAcustica.jpg"
+  },
+  {
+    id: 10,
+    nombre: "Teclado Digital 61 teclas Yamaha PSR-E373",
+    categoria: "Teclados y Pianos",
+    descripcion: "61 teclas sensibles al tacto, 622 voces.",
+    descripcionLarga: "",
+    precio: 249990,
+    stock: 4,
+    imagen: "imagenes/cards/TecladoDigitalYamahaPSR-E373.jpg"
+  },
+  {
+    id: 11,
+    nombre: "Amplificador Acústico 40W Fishman Loudbox Mini",
+    categoria: "Amplificadores",
+    descripcion: "60W, 2 canales, reverb y chorus incorporados.",
+    descripcionLarga: "El Loudbox Mini Charge es un amplificador portátil alimentado por batería diseñado para reproducir fielmente el sonido de los instrumentos acústicos y una diversa variedad de acompañamientos vocales o grabados. Con la adición de conectividad inalámbrica Bluetooth®, ahora puedes agregar fácil y ordenadamente pistas de acompañamiento u otro acompañamiento a tus actuaciones, atascos o donde sea que tu Loudbox Mini Charge te lleve a ti y a tu música. ¿Dónde lo vas a llevar?",
+    precio: 499990,
+    stock: 2,
+    imagen: "imagenes/cards/AmplificadorAcustico40W.jpg"
+  },
+  {
+    id: 12,
+    nombre: "Pedal Reverb	Boss RV-6",
+    categoria: "Pedales de Efectos",
+    descripcion: "8 modos de reverb, control de shimmer.",
+    descripcionLarga: "Boss RV-6 pedal de reverberación digital - Operación mono o estéreo - Entrada de pedal de expresión - Pedal de reverberación compacto y versátil con sonido rico y expansivo. Esfera en sofisticados tonos de reverberación de nivel superior rápidamente con controles simples. Algoritmos de grado de estudio desarrollados con tecnología BOSS de vanguardia. Ocho modos de sonido proporcionan una amplia gama de efectos de reverberación listos para jugar. Los modos Shimmer, Dynamic, y Delay+Reverb ofrecen texturas exuberantes e inmersivas buscadas por los modernos playersInput para controlar nivel de reverberación con un pedal de expresión opcionalSoporta funcionamiento mono o estéreo.",
+    precio: 179990,
+    stock: 4,
+    imagen: "imagenes/cards/PedalReverb.jpg"
   }
+ /*,
+  {
+    id: ,
+    nombre: "",
+    categoria: "",
+    descripcion: "",
+    descripcionLarga: "",
+    precio: ,
+    stock: ,
+    imagen: "imagenes/cards/.jpg"
+  }
+  */ 
+ /*,
+  {
+    id: ,
+    nombre: "",
+    categoria: "",
+    descripcion: "",
+    descripcionLarga: "",
+    precio: ,
+    stock: ,
+    imagen: "imagenes/cards/.jpg"
+  }
+  */ 
+
 ];
