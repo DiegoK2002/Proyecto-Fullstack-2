@@ -24,7 +24,7 @@ function renderizarCatalogo() {
       p.descripcion +
       "</p>" +
       "<h4>" +
-      formatearPrecio(p.precio) +
+      formatoPrecio(p.precio) +
       "</h4>" +
       '<div class="d-flex gap-2 mt-2">' +
       '<a href="producto-detalle.html?id=' +
@@ -79,7 +79,7 @@ function renderizarDetalleProducto() {
     producto.nombre +
     "</h2>" +
     '<h3 class="text-primary">' +
-    formatearPrecio(producto.precio) +
+    formatoPrecio(producto.precio) +
     "</h3>" +
     "<p>" +
     producto.descripcionLarga +
