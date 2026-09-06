@@ -79,14 +79,11 @@
               <input type="text" id="p-nombre" class="form-control" placeholder="Ej: Guitarra Eléctrica Fender" required>
             </div>
             <div class="col-md-4">
-              <label class="form-label fw-bold">Categoría</label>
-              <select id="p-categoria" class="form-select">
-                <option value="Guitarras acústicas">Guitarras acústicas</option>
-                <option value="Guitarras eléctricas">Guitarras eléctricas</option>
-                <option value="Teclados">Teclados</option>
-                <option value="Baterías">Baterías</option>
-              </select>
-            </div>
+            <label class="form-label fw-bold">Categoría</label>
+            <select id="p-categoria" class="form-select" required>
+              <!-- Se rellena automáticamente con JS -->
+            </select>
+          </div>
             <div class="col-md-6">
               <label class="form-label fw-bold">Precio ($)</label>
               <input type="number" id="p-precio" class="form-control" placeholder="199990" required>

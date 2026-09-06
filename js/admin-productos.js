@@ -48,6 +48,37 @@ function guardarEnStorage(lista) {
   localStorage.setItem("productos", JSON.stringify(lista));
 }
 
+// Extrae categorías únicas de los productos registrados y llena el <select>
+function cargarCategoriasDinamicas() {
+  const select = document.getElementById("p-categoria");
+  if (!select) return;
+
+  const listaProductos = obtenerProductos();
+
+  // Obtener categorías únicas filtrando valores vacíos y ordenándolas
+  const categoriasUnicas = [...new Set(listaProductos.map((p) => p.categoria).filter(Boolean))].sort();
+
+  if (categoriasUnicas.length === 0) {
+    select.innerHTML = `<option value="">Sin categorías disponibles</option>`;
+    return;
+  }
+
+  select.innerHTML = categoriasUnicas
+    .map((cat) => `<option value="${cat}">${cat}</option>`)
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  cargarCategoriasDinamicas(); // Carga dinámica de categorías al iniciar
+  renderizarTablaAdmin();
+
+  const form = document.getElementById("form-producto");
+  if (form) form.addEventListener("submit", guardarProducto);
+
+  const btnNuevo = document.getElementById("btn-nuevo-producto");
+  if (btnNuevo) btnNuevo.addEventListener("click", limpiarFormulario);
+});
+
 function formatearPrecio(precio) {
   return "$" + Number(precio).toLocaleString("es-CL");
 }
@@ -132,6 +163,7 @@ function guardarProducto(e) {
   }
 
   guardarEnStorage(lista);
+  cargarCategoriasDinamicas(); // Actualiza el selector si se creó una categoría nueva
   renderizarTablaAdmin();
 
   // Cerrar modal
