@@ -34,6 +34,15 @@ footer{
 .card {
     margin: 0 auto;
     width: 100%;
+    width:650px;
+    text-align: center;
+    font-style: oblique;
+    color: rgb(110, 92, 75);
+}
+
+#admin {
+    margin: 0 auto;
+    width: 100%;
     max-width: 650px;
     text-align: center;
     font-style: oblique;
