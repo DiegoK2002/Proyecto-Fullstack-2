@@ -6,7 +6,7 @@ const productos = [
   {
     id: 1,
     nombre: "Guitarra Acústica Folk Yamaha F310",
-    categoria: "Guitarras acústicas",
+    categoria: "Guitarras Acústicas",
     descripcion: "Tapa de abeto, aros y fondo de meranti. Ideal para iniciantes.",
     descripcionLarga: "La Yamaha F310 es una de las guitarras acústicas más recomendadas para quienes recién comienzan. Su tapa de abeto entrega un sonido brillante y equilibrado, mientras que los aros y el fondo de meranti aportan calidez. Cuerpo tipo dreadnought, mástil de nato y diapasón de palo de rosa. Incluye cuerdas de acero de fábrica.",
     precio: 129990,
@@ -16,7 +16,7 @@ const productos = [
   {
     id: 2,
     nombre: "Guitarra Acústica Dreadnought Fender CD-60S",
-    categoria: "Guitarras acústicas",
+    categoria: "Guitarras Acústicas",
     descripcion: "Tapa de abeto macizo, brazo de caoba. Sonido cálido y proyectado.",
     descripcionLarga: "La Fender CD-60S cuenta con tapa de abeto sólido (no laminado), lo que mejora notablemente la resonancia y la proyección del sonido a medida que el instrumento se \"abre\" con el uso. Aros y fondo de caoba, mástil de arce, diapasón de nogal. Muy recomendada para quienes buscan dar el salto desde una guitarra de entrada a una de nivel intermedio.",
     precio: 189990,
@@ -56,7 +56,7 @@ const productos = [
   {
     id: 6,
     nombre: "Guitarra Eléctrica Stratocaster Squier Affinity Strat",
-    categoria: "Guitarras eléctricas",
+    categoria: "Guitarras Eléctricas",
     descripcion: "Cuerpo de álamo, mástil de arce, pastillas SSS.",
     descripcionLarga: "La Squier Affinity Stratocaster es la puerta de entrada al mundo Fender. Cuerpo de álamo, mástil de arce con diapasón de arce o laurel según acabado, y configuración de pastillas SSS (single-single-single) con selector de 5 posiciones, el clásico sonido Stratocaster. Requiere amplificador (no incluido).",
     precio: 249990,
@@ -66,7 +66,7 @@ const productos = [
   {
     id: 7,
     nombre: "Guitarra Eléctrica Les Paul Epiphone Les Paul Std",
-    categoria: "Guitarras eléctricas",
+    categoria: "Guitarras Eléctricas",
     descripcion: "Cuerpo caoba, tapa arce, pastillas humbucker.",
     descripcionLarga: "La guitarra eléctrica Epiphone Les Paul Standard 60s pertenece a la nueva colección Inspired by Gibson y vienen a recrear las características sonoras de las Les Paul de los 60s. Cuerpo de caoba con tapa de arce, mástil de caoba con diapasón de palorrosa y dos pastillas humbucker Alnico Classic. Incluye estuche rígido.",
     precio: 329990,

@@ -334,3 +334,52 @@ function generarDropdownCategorias() {
   menuCategorias.innerHTML = html;
 
 }
+
+
+
+function obtenerProductosPublicos() {
+  const guardados = localStorage.getItem("productos");
+  if (guardados) {
+    return JSON.parse(guardados);
+  }
+  return typeof productos !== "undefined" ? productos : [];
+}
+
+function formatearPrecio(precio) {
+  return "$" + Number(precio).toLocaleString("es-CL");
+}
+
+function generarDropdownCategorias() {
+  const menuCategorias = document.getElementById("menuCategorias");
+  if (!menuCategorias) return;
+
+  const lista = obtenerProductosPublicos();
+  if (lista.length === 0) return;
+
+  // Obtenemos las categorías únicas eliminando espacios
+  const categoriasUnicas = [...new Set(lista.map((p) => p.categoria.trim()))];
+
+  let html = `
+    <li><a class="dropdown-item" href="catalogo.html">Todos los Productos</a></li>
+    <li><hr class="dropdown-divider"></li>
+  `;
+
+  categoriasUnicas.forEach((cat) => {
+    html += `
+      <li>
+        <a class="dropdown-item" href="catalogo.html?categoria=${encodeURIComponent(cat)}">
+          ${cat}
+        </a>
+      </li>
+    `;
+  });
+
+  menuCategorias.innerHTML = html;
+}
+
+
+
+// Se ejecuta automáticamente al cargar CUALQUIER página que incluya main.js
+document.addEventListener("DOMContentLoaded", () => {
+  generarDropdownCategorias();
+});
