@@ -299,3 +299,38 @@ function mostrarMensajeCarrito() {
     }, 3000);
 
 }
+
+// GENERAR DROPDOWN DE CATEGORÍAS
+document.addEventListener('DOMContentLoaded', () => {
+    generarDropdownCategorias();
+});
+
+function generarDropdownCategorias() {
+  const menuCategorias = document.getElementById("menuCategorias");
+  if (!menuCategorias) return;
+
+  // Usa tu función obtenerProductosPublicos() para que considere también productos en localStorage
+  const lista = obtenerProductosPublicos();
+  if (lista.length === 0) return;
+
+  // Extrae categorías únicas y elimina espacios extras
+  const categoriasUnicas = [...new Set(lista.map((p) => p.categoria.trim()))];
+
+  let html = `
+    <li><a class="dropdown-item" href="catalogo.html">Todos los Productos</a></li>
+    <li><hr class="dropdown-divider"></li>
+  `;
+
+  categoriasUnicas.forEach((cat) => {
+    html += `
+      <li>
+        <a class="dropdown-item" href="catalogo.html?categoria=${encodeURIComponent(cat)}">
+          ${cat}
+        </a>
+      </li>
+    `;
+  });
+
+  menuCategorias.innerHTML = html;
+
+}

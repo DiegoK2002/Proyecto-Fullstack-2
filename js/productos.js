@@ -75,6 +75,46 @@ const productos = [
   },
   {
     id: 8,
+    nombre: "Guitarra Eléctrica SG Epiphone	SG Standard",
+    categoria: "Guitarras Eléctricas",
+    descripcion: "Cuerpo caoba, mástil caoba, 2 humbuckers.",
+    descripcionLarga: "El Epiphone SG Standard de la nueva colección Inspired by Gibson, recrea el legendario clásico de la década de 1960 que impulsó la primera generación de bandas de hard rock y heavy metal, incluidas The Who, Cream, AC / DC y Black Sabbath. La guitarra presenta el histórico perfil SG con golpeador batwing, un par de humbuckers Alnico Classic PRO ™ de Epiphone y afinadores Epiphone Deluxe de relación 18: 1. Este modelo Epiphone inspirado en Gibson Original también tiene el cabezal Kalamazoo, cuello enrollado para una sensación cómoda, tuerca GraphTech® NuBone ™, cableado apropiado para la época y potenciómetros CTS. La carcasa rígida o EpiLite opcional está disponible. Disponible en acabados brillantes Heritage Cherry, Ebony y Alpine White.",
+    precio: 319990,
+    stock: 3,
+    imagen: "imagenes/cards/GuitarraEléctricaSGEpiphone.jpg"
+  },
+  {
+    id: 9,
+    nombre: "Guitarra Eléctrica Telecaster Squier	Affinity Tele",
+    categoria: "Guitarras Eléctricas",
+    descripcion: "Cuerpo álamo, clavijero vintage, 2 pastillas single.",
+    descripcionLarga: "La Squier Telecaster® Sonic™ está lista para lanzar cualquier aventura musical a la velocidad de la luz, ofreciendo el estilo icónico de Fender® y un tono inspirador para los músicos en cualquier etapa. Esta Tele® luce un perfil de mástil delgado y atractivo en forma de C y un cuerpo delgado y liviano para una comodidad óptima al tocar, mientras un par de cápsulas de bobina simple Squier® repican con claridad cristalina para una amplia variedad de tonos versátiles. Otros detalles de este modelo incluyen un puente fijo de 6 selletas para una entonación confiable, clavijeros de engranajes sellados para una afinación suave y precisa y hardware cromado duradero que seguramente llamará la atención.",
+    precio: 239990,
+    stock: 4,
+    imagen: "imagenes/cards/GuitarraElectricaTelecaster.jpg"
+  },
+  {
+    id: 10,
+    nombre: "Guitarra Eléctrica Semi-hollow	Epiphone ES-335",
+    categoria: "Guitarras Eléctricas",
+    descripcion: "Semi-hueca, 2 humbuckers, ideal para jazz y blues.",
+    descripcionLarga: "El Epiphone Inspired by Gibson ES-335 Figured honra al inmortal ES-335, el delgado arco semihueco que llevó la clase de arco a la era del rock. Con un bloque central de arce sólido para mayor resistencia al apoyo y a la retroalimentación, humbuckers Alnico Classic PRO, afinadores rotomáticos Grover y una parte superior de chapa de arce de llama en impresionantes acabados brillantes de Blueberry Burst y Raspberry Tea Burst que seguramente llamarán la atención. Carcasa rígida opcional o EpiLite disponible por separado.",
+    precio: 549990,
+    stock: 2,
+    imagen: "imagenes/cards/GuitarraElectricaES335.jpg"
+  },
+  {
+    id: 11,
+    nombre: "Bajo Eléctrico 4 Cuerdas	Squier Affinity PJ",
+    categoria: "Bajos Eléctricos",
+    descripcion: "Pickup PJ, cuerpo álamo, mástil arce.",
+    descripcionLarga: "El squier precision bass es el bajo eléctrico perfecto para dar el salto al auténtico sonido Fender®. Ligero, cómodo y versátil, su configuración PJ te permite explorar graves profundos y tonos brillantes con total libertad. Diseñado para inspirar desde el primer ensayo hasta el escenario, es la base sólida que todo bajista necesita para destacar.",
+    precio: 299990,
+    stock: 5,
+    imagen: "imagenes/cards/BajoEléctricoAffinityPJ.jpg"
+  },
+  {
+    id: 12,
     nombre: "Bajo Eléctrico Jazz Bass Fender Player Jazz",
     categoria: "Bajos Eléctricos",
     descripcion: "Alder body, 2 Alnico V Jazz single-coil.",
@@ -84,7 +124,18 @@ const productos = [
     imagen: "imagenes/cards/JazzBassFender.jpg"
   },
   {
-    id: 9,
+    id: 13,
+    nombre: "Bajo Acústico 4 Cuerdas	Yamaha	APX700II",
+    categoria: "Bajos Eléctricos",
+    descripcion: "Electroacústico, afinador incorporado.",
+    descripcionLarga: "",
+    precio: 429990,
+    stock: 2,
+    imagen: "imagenes/cards/BajoAcústicoYamahaAPX700II.jpg"
+  },
+  {
+    
+    id: 14,
     nombre: "Batería Acústica 5 piezas Pearl Roadshow",
     categoria: "Baterías",
     descripcion: "Incluye stands, platillos y pedal de bombo.",
@@ -92,9 +143,50 @@ const productos = [
     precio: 599990,
     stock: 2,
     imagen: "imagenes/cards/BateriaAcustica.jpg"
+
   },
   {
-    id: 10,
+    id: 15,
+    nombre: "Batería Electrónica 8 pads	Roland	TD-02KV",
+    categoria: "Baterías",
+    descripcion: "Módulo TD-02, 8 pads de goma, pedal hi-hat.",
+    descripcionLarga: "TD-02K Empieza tu aventura de batería con buen pie. La serie TD-02 te ofrece la mejor experiencia básica de batería electrónica del mundo a un precio asequible, respaldados por décadas de innovación de V-Drums, estos kits compactos y superexpresivos son mucho mejores que la suma de sus partes.",
+    precio: 799990,
+    stock: 2,
+    imagen: "imagenes/cards/BateríaElectrónicaRolandTD-02KV.jpg"
+  },
+  {
+    id: 16,
+    nombre: "Caja Snare 14'	Pearl	STE1450",
+    categoria: "Baterías",
+    descripcion: "Acero, 14x5', 10 tensores.",
+    descripcionLarga: "Experimenta un sonido de caja versátil y con gran respuesta con un casco de Aluminio Sin Soldadura de 1.2mm: Proporciona un sonido brillante, seco y articulado con una rápida caída y gran sensibilidad. La construcción sin soldadura mejora la resonancia y la estabilidad de la afinación.",
+    precio: 89990,
+    stock: 4,
+    imagen: "imagenes/cards/CajaSnarePearlSTE1450.jpg"
+  },
+  {
+    id: 17,
+    nombre: "Platillo Hi-Hat 14' Zildjian	A Series",
+    categoria: "Baterías",
+    descripcion: "Latón B20, sonido brillante y claro.",
+    descripcionLarga: "Reconocidos por su impactante acabado brillante, los HiHats Custom cuentan con ranuras tonales únicas y perfiles inferiores. Juntos, estos atributos producen un platillo con un sonido más suave, vidrioso y brillante con más elasticidad cuando se golpea. Son estas cualidades las que han hecho que el sonido de A Custom sea particularmente buscado en el estudio.",
+    precio: 149990,
+    stock: 3,
+    imagen: "imagenes/cards/PlatilloHi-HatZildjianASeries.jpg"
+  },
+  {
+    id: 18,
+    nombre: "Platillo Crash 16'	Zildjian	A Series",
+    categoria: "Baterías",
+    descripcion: "Latón B20, ataque rápido.",
+    descripcionLarga: "El platillo Crash Zildjian Planet Z ZP16C de 16 pulgadas ofrece un ataque brillante, rápido y un sostén corto pero potente, perfecto para acentuar compases y dar dinámica a tus ejecuciones. Diseñado para estudiantes y bateristas en desarrollo, este Crash proporciona la legendaria musicalidad y durabilidad de Zildjian a un nivel accesible.",
+    precio: 129990,
+    stock: 3,
+    imagen: "imagenes/cards/PlatilloCrash16.jpg"
+  },
+  {
+    id: 19,
     nombre: "Teclado Digital 61 teclas Yamaha PSR-E373",
     categoria: "Teclados y Pianos",
     descripcion: "61 teclas sensibles al tacto, 622 voces.",
@@ -104,7 +196,67 @@ const productos = [
     imagen: "imagenes/cards/TecladoDigitalYamahaPSR-E373.jpg"
   },
   {
-    id: 11,
+    id: 20,
+    nombre: "Piano Digital 88 teclas Yamaha P-45",
+    categoria: "Teclados y Pianos",
+    descripcion: "88 teclas pesadas, 10 voces, pedal sustain incluido.",
+    descripcionLarga: "La serie P le ofrece el sonido dinámico de gran calidad y la respuesta de pulsación de piano natural que se espera de Yamaha, fabricantes de pianos acústicos de talla mundial durante más de un siglo. Estos pianos distintivos de Yamaha, junto con un sistema de altavoces estéreo incorporado de gran calidad, se proporcionan en un tamaño compacto.",
+    precio: 499990,
+    stock: 2,
+    imagen: "imagenes/cards/PianoDigitalYamahaP-45.jpg"
+  },
+  {
+    id: 21,
+    nombre: "Sintetizador 49 teclas	Arturia	MiniLab MKII",
+    categoria: "Teclados y Pianos",
+    descripcion: "MIDI controller, 49 mini teclas.",
+    descripcionLarga: "El Arturia Keylab Essential 49 mk3 White es un controlador MIDI diseñado para entregar un ritmo de trabajo fluido a la hora de hacer música. Este controlador entrega a músicos y productores la posibilidad de controlar cualquier DAW o hardware con todos los controles esenciales en la punta de sus dedos, herramientas creativas a su disposición y el software musical más inspirador incluido.",
+    precio: 129990,
+    stock: 5,
+    imagen: "imagenes/cards/SintetizadorArturiaMiniLabMKII.jpg"
+  },
+  {
+    id: 22,
+    nombre: "Teclado MIDI 88 teclas	M-Audio	Hammer 88",
+    categoria: "Teclados y Pianos",
+    descripcion: "88 teclas martillo, sin sonidos propios.",
+    descripcionLarga: "El M-Audio Hammer 88 es un controlador de teclado premium diseñado para músicos profesionales, semiprofesionales o estudiantes que buscan una experiencia realista similar a la de un piano de cola para usar con instrumentos virtuales o módulos de sonido.",
+    precio: 339990,
+    stock: 2,
+    imagen: "imagenes/cards/TecladoMIDIM-Audio.jpg"
+  },
+  {
+    id: 23,
+    nombre: "Amplificador Guitarra 15W Fender Frontman 15G",
+    categoria: "Amplificadores",
+    descripcion: "15W, distorsión incorporada, entrada auxiliar.",
+    descripcionLarga: "POTENCIA Y CALIDAD DE SONIDO Este amplificador ofrece una potencia de 15W RMS, ideal para practicar y presentaciones pequeñas. Su diseño compacto y ligero facilita su transporte.",
+    precio: 99990,
+    stock: 5,
+    imagen: "imagenes/cards/AmplificadorGuitarra15WFenderFrontman.jpg"
+  },
+  {
+    id: 24,
+    nombre: "Amplificador Guitarra 40W Marshall MG40GFX",
+    categoria: "Amplificadores",
+    descripcion: "40W, 4 canales, efectos digitales integrados.",
+    descripcionLarga: "Si lo que buscas es un equipo que se caracterice por tener una distorsión única y mayor calidez de sonidos clásicos y orgánicos, este amplificador valvular es ideal para ti. Cantidad de canales al contar con 2 canales, te permitirán alcanzar tonos limpios y reproducir todos los géneros de música.",
+    precio: 299990,
+    stock: 3,
+    imagen: "imagenes/cards/AmplificadorGuitarra40WMarshall.jpg"
+  },
+  {
+    id: 25,
+    nombre: "Amplificador Bajo 100W	Hartke HD100",
+    categoria: "Amplificadores",
+    descripcion: "100W, tweeter integrado, ecualizador de 4 bandas.",
+    descripcionLarga: "Este Amplificador es la herramienta perfecta para bajistas que necesitan gran potencia en un formato compacto, ideal para presentaciones en vivo, ensayos exigentes o giras. Este combo compacto se convierte en el favorito de clubes gracias a su capacidad de integrarse perfectamente en la mezcla, ofreciendo un sonido claro, balanceado y con presencia profesional.",
+    precio: 449990,
+    stock: 2,
+    imagen: "imagenes/cards/AmplificadorBajo100WHartke.jpg"
+  },
+  {
+    id: 26,
     nombre: "Amplificador Acústico 40W Fishman Loudbox Mini",
     categoria: "Amplificadores",
     descripcion: "60W, 2 canales, reverb y chorus incorporados.",
@@ -113,8 +265,14 @@ const productos = [
     stock: 2,
     imagen: "imagenes/cards/AmplificadorAcustico40W.jpg"
   },
+
+
+
+
+
+
   {
-    id: 12,
+    id: 32,
     nombre: "Pedal Reverb	Boss RV-6",
     categoria: "Pedales de Efectos",
     descripcion: "8 modos de reverb, control de shimmer.",
@@ -123,6 +281,10 @@ const productos = [
     stock: 4,
     imagen: "imagenes/cards/PedalReverb.jpg"
   }
+  
+  
+  
+   
  /*,
   {
     id: ,
@@ -135,17 +297,4 @@ const productos = [
     imagen: "imagenes/cards/.jpg"
   }
   */ 
- /*,
-  {
-    id: ,
-    nombre: "",
-    categoria: "",
-    descripcion: "",
-    descripcionLarga: "",
-    precio: ,
-    stock: ,
-    imagen: "imagenes/cards/.jpg"
-  }
-  */ 
-
 ];
