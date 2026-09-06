@@ -141,17 +141,19 @@ document.addEventListener("click", function(event) {
 
     //alert("El botón funciona");
 
-        const nombre = boton.dataset.nombre;
+        const id = boton.dataset.id;
+    const nombre = boton.dataset.nombre;
     const precio = Number(boton.dataset.precio);
     const imagen = boton.dataset.imagen;
 
+    console.log("ID:", id);
     console.log("Nombre:", nombre);
     console.log("Precio:", precio);
     console.log("Imagen:", imagen);
     console.log("Carrito antes:", carrito);
 
     const productoExistente = carrito.find(
-        producto => producto.nombre === nombre
+        producto => producto.id === id
     );
 
     if (productoExistente) {
@@ -161,6 +163,7 @@ document.addEventListener("click", function(event) {
     } else {
 
         carrito.push({
+            id: id,
             nombre: nombre,
             precio: precio,
             imagen: imagen,

@@ -32,7 +32,13 @@ function renderizarCatalogo() {
           <h4 class="text-primary fw-bold my-2">${formatearPrecio(p.precio)}</h4>
           <div class="d-flex gap-2 mt-2">
             <a href="producto-detalle.html?id=${p.id}" class="btn btn-outline-primary w-50">Ver detalle</a>
-            <button class="btn btn-primary btn-agregar-carrito w-50" onclick="agregarAlCarrito(${p.id})">Agregar</button>
+            <button class="btn btn-primary btn-agregar-carrito w-50"
+                    data-id="${p.id}"
+                    data-nombre="${p.nombre}"
+                    data-precio="${p.precio}"
+                    data-imagen="${p.imagen}">
+                Agregar
+            </button>
           </div>
         </div>
       </div>
@@ -71,7 +77,13 @@ function renderizarDetalleProducto() {
       <p class="lead text-secondary">${producto.descripcionLarga || producto.descripcion}</p>
       <p class="text-muted">Stock disponible: <strong>${producto.stock}</strong> unidades</p>
       <div class="d-flex gap-2 mt-4">
-        <button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+        <button class="btn btn-primary btn-agregar-carrito"
+                data-id="${producto.id}"
+                data-nombre="${producto.nombre}"
+                data-precio="${producto.precio}"
+                data-imagen="${producto.imagen}">
+            Agregar al carrito
+        </button>
         <a href="catalogo.html" class="btn btn-outline-secondary">Volver al catálogo</a>
       </div>
     </div>`;

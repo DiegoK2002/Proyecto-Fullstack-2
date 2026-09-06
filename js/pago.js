@@ -1,4 +1,4 @@
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+// carrito ya está declarado y cargado por main.js (debe incluirse antes que este script)
 
 // Formatear valor a peso chileno
 function formatoPrecio(precio) {
