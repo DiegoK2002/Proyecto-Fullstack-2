@@ -79,7 +79,7 @@ function renderizarDetalleProducto() {
 
 // AQUÍ SE AGREGA LA LLAMADA AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", () => {
-  generarDropdownCategorias(); // <--- OBLIGATORIO para poblar el menú desplegable
-  renderizarCatalogo();
-  renderizarDetalleProducto();
+    renderizarCatalogo();
+    renderizarDetalleProducto();
+
 });

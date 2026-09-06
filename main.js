@@ -300,40 +300,63 @@ function mostrarMensajeCarrito() {
 
 }
 
-// GENERAR DROPDOWN DE CATEGORÍAS
-document.addEventListener('DOMContentLoaded', () => {
-    generarDropdownCategorias();
-});
+
+
+
 
 function generarDropdownCategorias() {
-  const menuCategorias = document.getElementById("menuCategorias");
-  if (!menuCategorias) return;
+    const menuCategorias =
+        document.getElementById("menuCategorias");
 
-  // Usa tu función obtenerProductosPublicos() para que considere también productos en localStorage
-  const lista = obtenerProductosPublicos();
-  if (lista.length === 0) return;
+    if (!menuCategorias) return;
 
-  // Extrae categorías únicas y elimina espacios extras
-  const categoriasUnicas = [...new Set(lista.map((p) => p.categoria.trim()))];
+    const lista = obtenerProductosPublicos();
 
-  let html = `
-    <li><a class="dropdown-item" href="catalogo.html">Todos los Productos</a></li>
-    <li><hr class="dropdown-divider"></li>
-  `;
+    if (lista.length === 0) return;
 
-  categoriasUnicas.forEach((cat) => {
-    html += `
-      <li>
-        <a class="dropdown-item" href="catalogo.html?categoria=${encodeURIComponent(cat)}">
-          ${cat}
-        </a>
-      </li>
+    // Crear categorías únicas
+    const categoriasUnicas = [
+        ...new Set(
+            lista.map(producto =>
+                producto.categoria.trim()
+            )
+        )
+    ];
+
+    let html = `
+        <li>
+            <a class="dropdown-item"
+               href="catalogo.html">
+
+                Todos los Productos
+
+            </a>
+        </li>
+
+        <li>
+            <hr class="dropdown-divider">
+        </li>
     `;
-  });
 
-  menuCategorias.innerHTML = html;
+    categoriasUnicas.forEach((categoria) => {
+
+        html += `
+            <li>
+                <a class="dropdown-item"
+                   href="catalogo.html?categoria=${encodeURIComponent(categoria)}">
+
+                    ${categoria}
+
+                </a>
+            </li>
+        `;
+
+    });
+
+    menuCategorias.innerHTML = html;
 
 }
+
 
 
 
@@ -349,33 +372,6 @@ function formatearPrecio(precio) {
   return "$" + Number(precio).toLocaleString("es-CL");
 }
 
-function generarDropdownCategorias() {
-  const menuCategorias = document.getElementById("menuCategorias");
-  if (!menuCategorias) return;
-
-  const lista = obtenerProductosPublicos();
-  if (lista.length === 0) return;
-
-  // Obtenemos las categorías únicas eliminando espacios
-  const categoriasUnicas = [...new Set(lista.map((p) => p.categoria.trim()))];
-
-  let html = `
-    <li><a class="dropdown-item" href="catalogo.html">Todos los Productos</a></li>
-    <li><hr class="dropdown-divider"></li>
-  `;
-
-  categoriasUnicas.forEach((cat) => {
-    html += `
-      <li>
-        <a class="dropdown-item" href="catalogo.html?categoria=${encodeURIComponent(cat)}">
-          ${cat}
-        </a>
-      </li>
-    `;
-  });
-
-  menuCategorias.innerHTML = html;
-}
 
 
 
