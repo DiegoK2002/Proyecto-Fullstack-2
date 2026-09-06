@@ -1,4 +1,25 @@
-// Arreglo inicial de demostración: solo se usa la primera vez, si no hay datos guardados
+// Función para mostrar alertas de confirmación
+function mostrarAlerta(mensaje, tipo = "success") {
+  const contenedor = document.getElementById("alerta-container");
+  if (!contenedor) return;
+
+  contenedor.innerHTML = `
+    <div class="alert alert-${tipo} alert-dismissible fade show shadow-sm d-flex align-items-center" role="alert">
+      <i class="bi ${tipo === 'danger' ? 'bi-person-x-fill' : 'bi-check-circle-fill'} fs-5 me-2"></i>
+      <div>${mensaje}</div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  setTimeout(() => {
+    const alertEl = contenedor.querySelector('.alert');
+    if (alertEl) {
+      const bsAlert = bootstrap.Alert.getOrCreateInstance(alertEl);
+      bsAlert.close();
+    }
+  }, 3500);
+}
+
 const usuariosPorDefecto = [
   { run: "19.012.345-K", nombre: "Administrador", apellidos: "General", correo: "admin@sonidovivo.cl", rol: "Administrador" },
   { run: "18.765.432-1", nombre: "María", apellidos: "González", correo: "maria@ejemplo.com", rol: "Cliente" },
@@ -19,7 +40,6 @@ function obtenerUsuarios() {
     }
   }
 
-  // Primera carga: sembrar localStorage con los datos de demostración
   localStorage.setItem("usuarios", JSON.stringify(usuariosPorDefecto));
   return usuariosPorDefecto;
 }
@@ -74,7 +94,9 @@ function guardarUsuario(e) {
     rol: document.getElementById("u-rol").value
   };
 
-  if (index !== "") {
+  const esEdicion = index !== "";
+
+  if (esEdicion) {
     usuariosDemo[parseInt(index, 10)] = usuario;
   } else {
     usuariosDemo.push(usuario);
@@ -88,6 +110,13 @@ function guardarUsuario(e) {
   if (modalInstance) modalInstance.hide();
 
   limpiarFormularioUsuario();
+
+  // Notificación en pantalla
+  if (esEdicion) {
+    mostrarAlerta(`El usuario <strong>${usuario.nombre} ${usuario.apellidos}</strong> ha sido editado correctamente.`, "success");
+  } else {
+    mostrarAlerta(`El usuario <strong>${usuario.nombre} ${usuario.apellidos}</strong> ha sido creado con éxito.`, "success");
+  }
 }
 
 function prepararEdicionUsuario(index) {
@@ -110,11 +139,17 @@ function prepararEdicionUsuario(index) {
 }
 
 function eliminarUsuario(index) {
-  if (!confirm("¿Deseas eliminar este usuario de la vista?")) return;
   const usuariosDemo = obtenerUsuarios();
+  const usuarioAEliminar = usuariosDemo[index];
+
+  if (!confirm("¿Deseas eliminar este usuario de la vista?")) return;
+
   usuariosDemo.splice(index, 1);
   guardarUsuariosEnStorage(usuariosDemo);
   renderizarTablaUsuarios();
+
+  // Notificación de eliminación
+  mostrarAlerta(`El usuario <strong>${usuarioAEliminar ? usuarioAEliminar.nombre + ' ' + usuarioAEliminar.apellidos : ''}</strong> ha sido eliminado.`, "danger");
 }
 
 function limpiarFormularioUsuario() {

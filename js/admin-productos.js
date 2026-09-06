@@ -1,3 +1,26 @@
+// Función para mostrar alertas de confirmación
+function mostrarAlerta(mensaje, tipo = "success") {
+  const contenedor = document.getElementById("alerta-container");
+  if (!contenedor) return;
+
+  contenedor.innerHTML = `
+    <div class="alert alert-${tipo} alert-dismissible fade show shadow-sm d-flex align-items-center" role="alert">
+      <i class="bi ${tipo === 'danger' ? 'bi-trash-fill' : 'bi-check-circle-fill'} fs-5 me-2"></i>
+      <div>${mensaje}</div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+
+  // Auto-desaparecer la alerta después de 3.5 segundos
+  setTimeout(() => {
+    const alertEl = contenedor.querySelector('.alert');
+    if (alertEl) {
+      const bsAlert = bootstrap.Alert.getOrCreateInstance(alertEl);
+      bsAlert.close();
+    }
+  }, 3500);
+}
+
 // Obtener productos garantizando carga inicial si localStorage está vacío
 function obtenerProductos() {
   const guardados = localStorage.getItem("productos");
@@ -13,7 +36,6 @@ function obtenerProductos() {
     }
   }
 
-  // Si no hay datos o está vacío, recargar desde el arreglo global de productos.js
   if (typeof productos !== "undefined" && Array.isArray(productos)) {
     localStorage.setItem("productos", JSON.stringify(productos));
     return productos;
@@ -76,8 +98,11 @@ function guardarProducto(e) {
   const imagen = document.getElementById("p-imagen").value.trim() || "imagenes/cards/1.png";
   const descripcion = document.getElementById("p-descripcion").value.trim();
 
+  let esEdicion = false;
+
   if (idInput) {
     // Editar existente
+    esEdicion = true;
     const index = lista.findIndex((p) => p.id === parseInt(idInput, 10));
     if (index !== -1) {
       lista[index] = {
@@ -118,6 +143,13 @@ function guardarProducto(e) {
 
   document.getElementById("form-producto").reset();
   document.getElementById("p-id").value = "";
+
+  // Notificación en pantalla
+  if (esEdicion) {
+    mostrarAlerta(`El producto <strong>"${nombre}"</strong> ha sido actualizado con éxito.`, "success");
+  } else {
+    mostrarAlerta(`El producto <strong>"${nombre}"</strong> ha sido añadido correctamente.`, "success");
+  }
 }
 
 function prepararEdicion(id) {
@@ -141,13 +173,18 @@ function prepararEdicion(id) {
 }
 
 function eliminarProducto(id) {
+  const listaOriginal = obtenerProductos();
+  const productoAEliminar = listaOriginal.find((p) => p.id === id);
+
   if (!confirm("¿Estás seguro de eliminar este producto del inventario?")) return;
 
-  let lista = obtenerProductos();
-  lista = lista.filter((p) => p.id !== id);
+  const lista = listaOriginal.filter((p) => p.id !== id);
 
   guardarEnStorage(lista);
   renderizarTablaAdmin();
+
+  // Notificación de eliminación
+  mostrarAlerta(`El producto <strong>"${productoAEliminar ? productoAEliminar.nombre : ''}"</strong> fue eliminado correctamente.`, "danger");
 }
 
 function limpiarFormulario() {
