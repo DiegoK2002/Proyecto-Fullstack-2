@@ -1,13 +1,38 @@
-// Arreglo inicial de demostración gráfica
-let usuariosDemo = [
+// Arreglo inicial de demostración: solo se usa la primera vez, si no hay datos guardados
+const usuariosPorDefecto = [
   { run: "19.012.345-K", nombre: "Administrador", apellidos: "General", correo: "admin@sonidovivo.cl", rol: "Administrador" },
   { run: "18.765.432-1", nombre: "María", apellidos: "González", correo: "maria@ejemplo.com", rol: "Cliente" },
   { run: "17.432.109-8", nombre: "Carlos", apellidos: "Tapia", correo: "carlos.tapia@gmail.com", rol: "Cliente" }
 ];
 
+function obtenerUsuarios() {
+  const guardados = localStorage.getItem("usuarios");
+
+  if (guardados) {
+    try {
+      const parsed = JSON.parse(guardados);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    } catch (e) {
+      console.error("Error al leer localStorage:", e);
+    }
+  }
+
+  // Primera carga: sembrar localStorage con los datos de demostración
+  localStorage.setItem("usuarios", JSON.stringify(usuariosPorDefecto));
+  return usuariosPorDefecto;
+}
+
+function guardarUsuariosEnStorage(lista) {
+  localStorage.setItem("usuarios", JSON.stringify(lista));
+}
+
 function renderizarTablaUsuarios() {
   const tbody = document.getElementById("tabla-usuarios-body");
   if (!tbody) return;
+
+  const usuariosDemo = obtenerUsuarios();
 
   if (usuariosDemo.length === 0) {
     tbody.innerHTML = `<tr><td colspan="5" class="text-center py-4 text-muted">No existen usuarios registrados.</td></tr>`;
@@ -39,6 +64,7 @@ function renderizarTablaUsuarios() {
 function guardarUsuario(e) {
   e.preventDefault();
 
+  const usuariosDemo = obtenerUsuarios();
   const index = document.getElementById("u-index").value;
   const usuario = {
     run: document.getElementById("u-run").value.trim(),
@@ -54,6 +80,7 @@ function guardarUsuario(e) {
     usuariosDemo.push(usuario);
   }
 
+  guardarUsuariosEnStorage(usuariosDemo);
   renderizarTablaUsuarios();
 
   const modalElement = document.getElementById("modalUsuario");
@@ -64,6 +91,7 @@ function guardarUsuario(e) {
 }
 
 function prepararEdicionUsuario(index) {
+  const usuariosDemo = obtenerUsuarios();
   const u = usuariosDemo[index];
   if (!u) return;
 
@@ -83,7 +111,9 @@ function prepararEdicionUsuario(index) {
 
 function eliminarUsuario(index) {
   if (!confirm("¿Deseas eliminar este usuario de la vista?")) return;
+  const usuariosDemo = obtenerUsuarios();
   usuariosDemo.splice(index, 1);
+  guardarUsuariosEnStorage(usuariosDemo);
   renderizarTablaUsuarios();
 }
 

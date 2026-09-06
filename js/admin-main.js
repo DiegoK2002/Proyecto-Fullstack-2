@@ -25,8 +25,8 @@ function actualizarContadoresAdmin() {
     } catch (e) {
       console.error("Error al leer usuarios de localStorage", e);
     }
-  } else if (typeof usuariosDemo !== "undefined" && Array.isArray(usuariosDemo)) {
-    totalUsuarios = usuariosDemo.length;
+  } else if (typeof usuariosPorDefecto !== "undefined" && Array.isArray(usuariosPorDefecto)) {
+    totalUsuarios = usuariosPorDefecto.length;
   }
 
   // Renderizar en el DOM
