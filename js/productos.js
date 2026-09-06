@@ -265,12 +265,56 @@ const productos = [
     stock: 2,
     imagen: "imagenes/cards/AmplificadorAcustico40W.jpg"
   },
-
-
-
-
-
-
+  {
+    id: 27,
+    nombre: "Micrófono Dinámico Cardioide	Shure	SM58",
+    categoria: "Micrófonos",
+    descripcion: "Estándar industria para voz en vivo.",
+    descripcionLarga: "Fabricado para manejar la voz con claridad y cuidado, el patrón polar cardioide uniforme reproduce cada nota con precisión. Deja atrás el ruido de fondo. En cualquier escenario, desde el espectáculo del club nocturno hasta el estadio, el SM58 ofrece un sonido cálido y nítido una y otra vez.",
+    precio: 149990,
+    stock: 8,
+    imagen: "imagenes/cards/Cardioide.jpg"
+  },
+  {
+    id: 28,
+    nombre: "Micrófono Dinámico Instrumento	Shure	SM57",
+    categoria: "Micrófonos",
+    descripcion: "Ideal para captura de instrumentos y amplificadores.",
+    descripcionLarga: "El Shure SM57 es un micrófono dinámico cardioide de uso versátil y robusto, reconocido como uno de los mejores micrófonos de la historia. Es una elección popular tanto para escenarios en vivo como para grabaciones en estudio, gracias a su capacidad para capturar una amplia gama de fuentes de sonido con precisión y detalle.",
+    precio: 139990,
+    stock: 6,
+    imagen: "imagenes/cards/SM57.jpg"
+  },
+  {
+    id: 29,
+    nombre: "Micrófono Condensador Audio-Tech	AT2020",
+    categoria: "Micrófonos",
+    descripcion: "Cardioide, XLR, ideal para grabación en estudio.",
+    descripcionLarga: "Calidad de sonido superior: captura audio rico y detallado con el diseño del condensador AT2020, perfecto para voces, instrumentos y podcasting. Experimenta claridad de grado profesional.",
+    precio: 199990,
+    stock: 4,
+    imagen: "imagenes/cards/AT2020.jpg"
+  },
+  {
+    id: 30,
+    nombre: "Micrófono USB de Condensador	Blue Yeti",
+    categoria: "Micrófonos",
+    descripcion: "USB, 4 patrones polares, ideal para streaming y podcast.",
+    descripcionLarga: "Perfecto para podcasting, transmisión de juegos, llamadas de Skype, YouTube o música. Salida de auriculares sin latencia, volumen de auriculares y silencio de micrófono",
+    precio: 299990,
+    stock: 5,
+    imagen: "imagenes/cards/Yeti.jpg"
+  },
+  {
+    id: 31,
+    nombre: "Pedal Distorsión Boss DS-1",
+    categoria: "Pedales de Efectos",
+    descripcion: "Clásico pedal de distorsión, 3 controles.",
+    descripcionLarga: "El DS1 te permitirá añadir un poco de distorsión fuerte, manteniendo los matices de tu interpretación con sus dinámicas. Además, dispone de un controlador de tono para moldear tu sonido a gusto.",
+    precio: 79990,
+    stock: 7,
+    imagen: "imagenes/cards/DS-1.jpg"
+  },
   {
     id: 32,
     nombre: "Pedal Reverb	Boss RV-6",
@@ -280,10 +324,197 @@ const productos = [
     precio: 179990,
     stock: 4,
     imagen: "imagenes/cards/PedalReverb.jpg"
+  },
+  {
+    id: 33,
+    nombre: "Pedal Multi-efectos Boss ME-80",
+    categoria: "Pedales de Efectos",
+    descripcion: "Diseño tipo pedalboard, 8 efectos simultáneos.",
+    descripcionLarga: "Un historial completo de procesamiento de tonos BOSS listo para conciertos está a su disposición, desde múltiples Overdrives y Distorsiones hasta wahs, efectos de modulación, cambios de tono, retrasos y más.",
+    precio: 349990,
+    stock: 2,
+    imagen: "imagenes/cards/ME-80.jpg"
+  },
+  {
+    id: 34,
+    nombre: "Pedal Tuner Cromático Boss TU-3",
+    categoria: "Pedales de Efectos",
+    descripcion: "Afinador cromático, indicador de tono.",
+    descripcionLarga: "Con una pantalla LED brillante y fácil de leer, permite afinar tu instrumento de forma rápida y precisa, incluso en entornos oscuros o con mucha luz. Cuenta con modos de afinación cromática y afinación por semitonos, así como la función de afinación plana hasta dos semitonos.",
+    precio: 89990,
+    stock: 8,
+    imagen: "imagenes/cards/TU-3.jpg"
+  },
+  {
+    id: 35,
+    nombre: "Pedal Delay MXR Carbon Copy",
+    categoria: "Pedales de Efectos",
+    descripcion: "Delay analógico cálido, tiempo 600ms.",
+    descripcionLarga: "Con 600 ms de tiempo de retardo con modulación opcional y un diseño de tres perillas que controla Delay, Mix y Regen. Además, hay dos potenciómetros de recorte internos que ofrecen un ancho ajustable por el usuario y un control de velocidad de la modulación para aún más opciones tonales.",
+    precio: 179990,
+    stock: 4,
+    imagen: "imagenes/cards/CarbonCopy.jpg"
+  },
+  {
+    id: 36,
+    nombre: "Pedal Overdrive Ibanez TS9",
+    categoria: "Pedales de Efectos",
+    descripcion: "Tube Screamer clásico, sonido suave y orgánico.",
+    descripcionLarga: "El pedal Ibanez Tube Screamer Ts9 Overdrive es un equipo esencial para los guitarristas que buscan un tono de alta calidad. Fabricado en Japón por la reconocida marca Ibanez, este pedal simula el sonido característico de un amplificador de válvulas, proporcionando una distorsión increíble para los estilos de rock y blues.",
+    precio: 99990,
+    stock: 6,
+    imagen: "imagenes/cards/TS9.jpg"
+  },
+  {
+    id: 37,
+    nombre: "Cuerdas Guitarra Eléctrica 09-42	Ernie Ball Super Slinky",
+    categoria: "Accesorios",
+    descripcion: "Juego 6 cuerdas, calibre ligero.",
+    descripcionLarga: "Las cuerdas para guitarra eléctrica Ernie Ball Nickel Wound están hechas de alambre de acero niquelado envuelto alrededor de un alambre de núcleo de acero en forma de hexágono estañado. Las cuerdas lisas están hechas de acero con alto contenido de carbono estañado especialmente templado, lo que produce un tono bien equilibrado para su guitarra.",
+    precio: 8990,
+    stock: 25,
+    imagen: "imagenes/cards/SuperSlinky.jpg"
+  },
+  {
+    id: 38,
+    nombre: "Cuerdas Guitarra Acústica 12-53 Ernie Ball Earthwood",
+    categoria: "Accesorios",
+    descripcion: "Bronce fósforo, sonido cálido.",
+    descripcionLarga: "Las cuerdas para guitarra acústica Ernie Ball Earthwood Bronze están hechas de alambre de 80% cobre y 20% zinc envuelto alrededor de un alambre con núcleo de acero chapado en latón con forma hexagonal. Estas cuerdas de guitarra acústica proporcionan un sonido nítido y resonante con matices agradables.",
+    precio: 10990,
+    stock: 20,
+    imagen: "imagenes/cards/Earthwood.jpg"
+  },
+  {
+    id: 39,
+    nombre: "Cuerdas Bajo 45-105 Ernie Ball Regular Slinky",
+    categoria: "Accesorios",
+    descripcion: "Cuerdas de níquel enrollado, set 4 cuerdas.",
+    descripcionLarga: "Las cuerdas para bajo eléctrico Ernie Ball Nickel Wound de escala corta están hechas de acero niquelado envuelto alrededor de un alambre de núcleo de acero con forma hexagonal.",
+    precio: 14990,
+    stock: 12,
+    imagen: "imagenes/cards/Slinky.jpg"
+  },
+  {
+    id: 40,
+    nombre: "Púas de Guitarra x10 (0.73mm) Fender 351",
+    categoria: "Accesorios",
+    descripcion: "Celulosa, grosor medio.",
+    descripcionLarga: "Las características principales de los picapuntos Fender 351 incluyen sus clásicos 351 forma, disponible en un espesor medio que se adapta a una variedad de juegos estilos. El paquete de 12 viene en colores variados, lo que le permite elegir una selección que coincide con su personalidad o estado de ánimo.",
+    precio: 3990,
+    stock: 50,
+    imagen: "imagenes/cards/Fender351.jpg"
+  },
+  {
+    id: 41,
+    nombre: "Capotraste Guitarra Dunlop Trigger",
+    categoria: "Accesorios",
+    descripcion: "Capotraste de resorte, compatible 6 cuerdas.",
+    descripcionLarga: "El Dunlop® Trigger® Capo le permite cambiar la llave rápida y fácilmente con un apretón de la mano. La fuerte abrazadera de acción de resorte de este capo lo mantiene firmemente en su lugar, mientras que su perfil delgado le asegura que puede mover el diapasón hacia arriba y hacia abajo sin obstáculos.",
+    precio: 12990,
+    stock: 15,
+    imagen: "imagenes/cards/Dunlop.jpg"
+  },
+  {
+    id: 42,
+    nombre: "Afinador de Clip Snark SN-5",
+    categoria: "Accesorios",
+    descripcion: "Afinador cromático de clip, pantalla giratoria.",
+    descripcionLarga: "Detección precisa de tono: Este afinador cuenta con tecnología de detección precisa de tono para garantizar que tu instrumento se mantenga afinado, brindándote el mejor sonido.",
+    precio: 8990,
+    stock: 20,
+    imagen: "imagenes/cards/Snark.jpg"
+  },
+  {
+    id: 43,
+    nombre: "Cable Instrumento 3m Monster S100-I-3",
+    categoria: "Accesorios",
+    descripcion: "Cable trenzado, conectores dorados, 3 metros.",
+    descripcionLarga: "Una conexión de calidad comienza con un cable de calidad. Y con el Monster Standard 100, usarás un cable que suena tan bien como se ve. Así que, ya sea que estés dando conciertos, grabando en el estudio o improvisando en el garaje, el Standard 100 es una excelente opción para iniciarte.",
+    precio: 12990,
+    stock: 15,
+    imagen: "imagenes/cards/S100.jpg"
+  },
+  {
+    id: 44,
+    nombre: "Cable Instrumento 6m	Monster	S100-I-6",
+    categoria: "Accesorios",
+    descripcion: "Cable trenzado, conectores dorados, 6 metros.",
+    descripcionLarga: "Una conexión de calidad comienza con un cable de calidad. Y con el Monster Standard 100, usarás un cable que suena tan bien como se ve. Así que, ya sea que estés dando conciertos, grabando en el estudio o improvisando en el garaje, el Standard 100 es una excelente opción para iniciarte.",
+    precio: 17990,
+    stock: 10,
+    imagen: "imagenes/cards/S100.jpg"
+  },
+  {
+    id: 45,
+    nombre: "Soporte Guitarra de Piso	Hercules GS302B",
+    categoria: "Accesorios",
+    descripcion: "Soporte plegable con enganche automático.",
+    descripcionLarga: "Construcción en aluminio reforzado que soporta una carga máxima de 15 kg para instrumentos de cuerda de distintos pesos. Estructura de pie con capacidad para 1 instrumento que permite el acceso inmediato a guitarras eléctricas y bajos.",
+    precio: 22990,
+    stock: 12,
+    imagen: "imagenes/cards/GS302B.jpg"
+  },
+  {
+    id: 46,
+    nombre: "Soporte Guitarra de Pared Hercules WAH-202",
+    categoria: "Accesorios",
+    descripcion: "Montaje a pared, enganche automático.",
+    descripcionLarga: "Soporte de pared que ahorra espacio y facilita la exhibición vertical de tu guitarra o bajo. Estructura de metal que garantiza resistencia y durabilidad, soportando hasta 7 kg sin problemas.",
+    precio: 18990,
+    stock: 10,
+    imagen: "imagenes/cards/WAH-202.jpg"
+  },
+  {
+    id: 47,
+    nombre: "Interfaz de Audio 2x2 USB Focusrite Scarlett Solo",
+    categoria: "Estudio y Grabación",
+    descripcion: "1 entrada XLR+instrumento, 2 salidas, 24bit/192kHz.",
+    descripcionLarga: "La Scarlett Solo (2.ª generación) de Focusrite te permite empezar a grabar de forma más rápida, sencilla y con mejores resultados que nunca. Esta interfaz de audio compacta cuenta con un preamplificador de micrófono Scarlett de sonido natural, una entrada para instrumentos rediseñada y una latencia ultrabaja. Es muy fácil de usar: basta con conectarla mediante un único cable USB, junto con el micrófono y los instrumentos, para empezar a grabar audio con calidad de estudio.",
+    precio: 149990,
+    stock: 4,
+    imagen: "imagenes/cards/SCARLETT-SOLO.jpg"
+  },
+  {
+    id: 48,
+    nombre: "Auriculares de Estudio	Audio-Tech. ATH-M20x",
+    categoria: "Estudio y Grabación",
+    descripcion: "Circumaurales, respuesta 15Hz-20kHz.",
+    descripcionLarga: "Los auriculares profesionales de monitorización ATH-M20x son una introducción ideal a la serie M. El diseño y los materiales de alta calidad proporcionan una experiencia de escucha confortable, con audio mejorado y aislamiento sonoro eficiente.",
+    precio: 79990,
+    stock: 6,
+    imagen: "imagenes/cards/ATH-M20x.jpg"
+  },
+  {
+    id: 49,
+    nombre: "Auriculares de Estudio Pro	Audio-Tech.	ATH-M50x",
+    categoria: "Estudio y Grabación",
+    descripcion: "Referencia de industria, sonido neutro y detallado.",
+    descripcionLarga: "El Audio Technica ATHM50X es el modelo más aclamado de la serie M, elogiado por reputados ingenieros de audio y críticos de audio profesional año tras año. Los auriculares ATH-M50x ofrecen la misma calidad de sonido, pero además disponen ahora de un cable desconectable.",
+    precio: 219990,
+    stock: 4,
+    imagen: "imagenes/cards/ATH-M50x.jpg"
+  },
+  {
+    id: 50,
+    nombre: "Monitor de Estudio 5 Yamaha HS5",
+    categoria: "Estudio y Grabación",
+    descripcion: "Altavoz activo, respuesta plana, ideal mezcla.",
+    descripcionLarga: "Los monitores de referencia de campo cercano de la serie HS son la encarnación de esta filosofía, ofreciendo una imagen de sonido concisa, alta resolución y respuesta plana.",
+    precio: 349990,
+    stock: 2,
+    imagen: "imagenes/cards/HS5.jpg"
+  },
+  {
+    id: 51,
+    nombre: "Pop Filter para Micrófono Sennheiser MZP 40",
+    categoria: "Estudio y Grabación",
+    descripcion: "Doble malla, brazo flexible con clip.",
+    descripcionLarga: "Filtro antipop para grabaciones vocales a corta distancia, apto para todo tipo de micrófonos. Se puede fijar a soportes de micrófono. Longitud del cuello de cisne: aprox. 240 mm. Diámetro del filtro: aprox. 130 mm.",
+    precio: 14990,
+    stock: 8,
+    imagen: "imagenes/cards/MZP-40.jpg"
   }
-  
-  
-  
    
  /*,
   {
